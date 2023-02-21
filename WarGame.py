@@ -3,7 +3,7 @@ import sys
 import random
 
 
-def wrongKeying():
+def wrongKeying():                                                  #If the user mistypes
     print("You Have Made Incomplate or Incorrect Keying!")
 
 
@@ -16,7 +16,7 @@ def addDot():  # Made to Give Game Look
     time.sleep(.5)
 
 
-def damageValue():
+def damageValue():                              # Here we generate random damage value between (1-29)
     return random.choice(range(1, 29))
 
 
@@ -26,7 +26,7 @@ class player:
         self.life = life
         self.power = power
 
-    def showKnowledges(self):
+    def showKnowledges(self):                                   
         print("""
         Name : {}
         Life : {}
@@ -97,10 +97,13 @@ while True:
 
     if move == "1":
         player1.attack(player2)
+        
     elif move == "2":
         player1.defense(player2)
+        
     elif move == "3":
         player1.exit()
+        
     else:
         wrongKeying()
         exit()
